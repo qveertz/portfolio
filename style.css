@@ -1,0 +1,145 @@
+:root {
+  --accent: #00c3ff;
+  --accent2: #ffff1c;
+  --text: #f5f5f5;
+  --card-bg: rgba(20, 22, 30, 0.85);
+  --shadow: 0 6px 32px rgba(0,0,0,0.35);
+  --radius: 22px;
+  --transition: 0.25s cubic-bezier(.25,.8,.25,1);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: url('mondeo.gif') center center/cover no-repeat fixed, linear-gradient(120deg, #232526 0%, #414345 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  backdrop-filter: blur(2px) brightness(0.93);
+}
+
+header {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  background: rgba(0,0,0,0.55);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 650px;
+  width: 90vw;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  font-size: 1.25rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+section {
+  background: var(--card-bg);
+  margin: 1.5rem auto;
+  padding: 2.2rem 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 650px;
+  width: 90vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), background 0.3s;
+  position: relative;
+  z-index: 1;
+  border-left: 6px solid var(--accent);
+}
+
+section:hover {
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+  background: rgba(30, 34, 44, 0.93);
+  border-left: 6px solid var(--accent2);
+}
+
+h2 {
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+ul {
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+#kontakt p {
+  margin: 0.3rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.3rem 0 1.5rem 0;
+  color: #bdbdbd;
+  font-size: 1rem;
+  margin-top: auto;
+  background: rgba(0,0,0,0.18);
+  border-radius: var(--radius);
+  max-width: 650px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  header, section, footer {
+    max-width: 98vw;
+    width: 98vw;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+  header h1 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
